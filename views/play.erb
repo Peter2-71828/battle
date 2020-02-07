@@ -1,20 +1,20 @@
 <body style='background-image: url("https://www.ssbwiki.com/images/thumb/7/73/SSBU-Pok%C3%A9mon_Stadium_2.png/1200px-SSBU-Pok%C3%A9mon_Stadium_2.png"); background-size: 100% 100%'>
     <div style="color: white; text-shadow: 4px 4px 4px #000000;">
         <div style="justify-content: space-between; display: flex; font-size: 20px;">
-            <h1><%= @game.player1.name %></h1>
+            <h1><%= $game.player1.name %></h1>
             <h1>VERSUS</h1>
-            <h1><%= @game.player2.name %></h1>
+            <h1><%= $game.player2.name %></h1>
         </div>
         <div style="justify-content: space-between; display: flex">
-            <h2>Player 1 health: <%= @game.player1.health %>HP</h2>
-            <h2>Player 2 health: <%= @game.player2.health %>HP</h2>
+            <h2>Player 1 health: <%= $game.player1.health %>HP</h2>
+            <h2>Player 2 health: <%= $game.player2.health %>HP</h2>
         </div>
         <form action="/attack" method="post">
             <input type="submit" id="player_1_attack" name="Attack" value="ATTACK"></input>
         </form>
         <div style="text-align: center; font-size: 30px">
             Let the battle commence!! <br>
-            <%= @game.current_turn.name %>'s turn
+            <%= $game.current_turn.name %>'s turn
         </div>
     </div>
     <div style="position: absolute; right: 18vw; bottom: 20vh;">
@@ -24,5 +24,3 @@
         <img src="https://projectpokemon.org/home/uploads/monthly_2019_06/large.charizard.png.178084b81f97d5d2eb01910228c49fb6.png" width="350">
     </div>
 <body>
-
- 
