@@ -9,17 +9,17 @@
             <h2>Player 1 health: <%= $game.player1.health %>HP</h2>
             <h2>Player 2 health: <%= $game.player2.health %>HP</h2>
         </div>
-        <form action="/attack" method="post">
-            <input type="submit" id="player_1_attack" name="Attack" value="ATTACK"></input>
+        <form action="/attack" method="post" style="float: left">
+            <input type="submit" name="Attack" value="ATTACK"></input>
         </form>
         <div style="text-align: center; font-size: 30px">
-            Player 2 attacked Player 1! </br>
-            The fans all cheer! </br>
+            <%= $game.previous_turn.name %> attacked! </br>
+            The crowd goes wild!! </br>
             <%= $game.current_turn.name %>'s turn
         </div>
     </div>
     <div style="position: absolute; right: 18vw; bottom: 20vh;">
-        <img src="https://pokemon.gameinfo.io/images/pokemon-go/009-00-shiny.png">
+      <img src="https://pokemon.gameinfo.io/images/pokemon-go/009-00-shiny.png">
     </div>
     <div style="position: absolute; left: 15vw; bottom: 20vh; transform: rotateY(180deg)">
         <img src="https://projectpokemon.org/home/uploads/monthly_2019_06/large.charizard.png.178084b81f97d5d2eb01910228c49fb6.png" width="350">
@@ -31,4 +31,4 @@
     <iframe style="visibility: hidden" width="420" height="315"
         src="https://www.youtube.com/embed/nMzMfJs8d-Y?autoplay=1" allow="autoplay">
     </iframe>
-<body>
+  <body>
