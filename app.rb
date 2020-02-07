@@ -22,13 +22,11 @@ class Battle < Sinatra::Base
     end
 
     post '/attack' do
-        $game
         $game.attack
         erb :attack
     end
 
     post '/attack2' do
-        $game = $game
         $game.attack
         erb :attack2
     end
