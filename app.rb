@@ -17,18 +17,12 @@ class Battle < Sinatra::Base
     end
 
     get '/play' do
-        $game
         erb(:play)
     end
 
     post '/attack' do
-        $game.attack
-        erb :attack
-    end
-
-    post '/attack2' do
-        $game.attack
-        erb :attack2
+       $game.attack
+       erb :attack
     end
 
     # start the server if ruby file executed directly

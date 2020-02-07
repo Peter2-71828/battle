@@ -2,7 +2,7 @@ require './lib/player.rb'
 
 class Game
 
-  attr_reader :player1, :player2, :current_turn
+  attr_reader :player1, :player2, :current_turn, :previous_turn
 
   def initialize(player1, player2)
     @turns = [(@player1 = player1), (@player2 = player2)]
@@ -17,6 +17,7 @@ class Game
 
   def switch_turn
     @counter = (@counter - 1).abs
+    @previous_turn = @current_turn
     @current_turn = @turns[@counter]
   end
 
